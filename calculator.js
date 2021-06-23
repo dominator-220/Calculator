@@ -90,7 +90,20 @@ function operate(currOperator){
         
                 
                 }
-                operations=[result.toString(),currOperator,""];
+                result=result.toFixed(5).toString();
+                result=Array.from(result);
+                if (result.indexOf(".")!=-1){
+                    while(result[result.length-1]=="0" | result[result.length-1]=="." ){
+                        if (result[result.length-1]=="."){
+                            result.pop();
+                            break;
+                        }
+                        result.pop();
+                    }
+                    result=result.join("");
+                }
+
+                operations=[result,currOperator,""];
 
             }
 
@@ -124,10 +137,36 @@ function calculate(){
 
         
         }
-        result=result.toString();
+        result=result.toFixed(5).toString();
+        result=Array.from(result);
+        if (result.indexOf(".")!=-1){
+            while(result[result.length-1]=="0" | result[result.length-1]=="." ){
+                if (result[result.length-1]=="."){
+                    result.pop();
+                    break;
+                }
+                result.pop();
+            }
+            result=result.join("");
+        }
         container.value=result;
         operations=[result];
 
          
     }
+}
+function Dot(dot){
+    len=operations.length;
+    if (operations[len-1].indexOf(".")==-1){
+        operations[len-1]=operations[len-1]+dot;
+    }
+    else{
+        alert("Invalid operation");
+    }
+
+
+    
+    console.log(operations);
+    container.value=operations[(operations.length)-1];
+
 }

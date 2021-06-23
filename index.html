@@ -2,12 +2,31 @@
 x
 <head>
 <style>
+html{
+    background-color: rgb(0,0,0,0.1);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 #calcbody{
     position:relative;
-    left:700px;
+    left:0px;
+    border: 1px solid rgb(97, 88, 88);
+    border-radius:5%;
+    width:700px;
+    height:600px;
+    margin-left:700px;
+    margin-top:100px;
+    background-color: rgba(150, 156, 119, 0.3);
+
+   
+
 
 }
 #rectangle{
+    margin-left:45px;
+    margin-top:40px;
     width:600px;
     height:75px;
     background:white;
@@ -17,52 +36,79 @@ x
 }
 #delete,#clear,.zero,.add{
     position:relative;
-    top:75px;
-    left:-618px;
+    margin-top:20px;
     width:140px;
     height:50px;
     font-size:20px;
     margin-left:10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+#delete{
+    margin-left:46px;
 }
 
 .one,.two,.three,.subtract{
     position:relative;
-    top:150px;
-    left:-1233px;
+    margin-top:40px;
     width:140px;
     height:50px;
     font-size:20px;
     margin-left:10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+.one{
+    margin-left: 45px;
 }
 .four,.five,.six,.multiply{
     position:relative;
-    top:170px;
-    left:-5px;
+    margin-top:40px;
+
     width:140px;
     height:50px;
     font-size:20px;
     margin-left:10px;
+    background: rgba(0, 0, 0, 0.1);
+
+}
+.four{
+    margin-left: 45px;
 }
 .seven,.eight,.nine,.divide{
     position:relative;
-    top:250px;
-    left:-619px;
+    margin-top:40px;
     width:140px;
     height:50px;
     font-size:20px;
     margin-left:10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.seven{
+    margin-left: 45px;
 }
 .dot,.equal{
     position:relative;
-    top:330px;
-    left:-1232px;
+    margin-top:40px;
     width:140px;
     height:50px;
     font-size:20px;
     margin-left:10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+.dot{
+    margin-left:45px;
 }
 .equal{
-    width:446px;
+    width:450px;
+    background-color:rgba(111, 209, 30,30);
+}
+#clear{
+    
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#delete{
+   
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 </style>
@@ -120,7 +166,7 @@ x
 <button id="/" class="divide" onClick="operate(this.id)">
     /
 </button>
-<button id="." class="dot" onClick="calculate(this.id)">
+<button id="." class="dot" onClick="Dot(this.id)">
     .
 </button>
 
